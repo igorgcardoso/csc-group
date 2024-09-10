@@ -1,0 +1,26 @@
+[package]
+name = "csc-group"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.87"
+axum = { version = "0.7.5", features = ["macros", "query"] }
+chrono = { version = "0.4.38", features = ["serde"] }
+dotenvy = "0.15.7"
+fake = { version = "2.9.2", features = ["chrono"] }
+rand = "0.8.5"
+serde = { version = "1.0.210", features = ["derive"] }
+sqlx = { version = "0.8.2", features = [
+    "runtime-tokio",
+    "sqlite",
+    "macros",
+    "migrate",
+    "chrono",
+] }
+thiserror = "1.0.63"
+tokio = { version = "1.40.0", features = ["rt-multi-thread"] }
+tower-http = { version = "0.5.2", features = ["trace", "cors"] }
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
+validator = { version = "0.18.1", features = ["derive"] }
